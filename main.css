@@ -32,6 +32,7 @@ body {
   color: rgb(70, 70, 70);
   font-family: monospace;
   font-size: 3rem;
+  overflow: auto;
 }
 
 .keypad {
@@ -72,8 +73,7 @@ body {
   flex: 2;
 }
 
-.ac-key,
-.undo-key {
+.clear-key {
   background-color: rgb(135, 211, 255);
 }
 
