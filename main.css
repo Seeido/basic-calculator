@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(173, 207, 232);
+  min-width: 300px;
+  width: 25%;
+  aspect-ratio: 2/3;
+  border-radius: 2.5%;
+}
+
+.display {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+.display-text {
+  padding: 1.5rem;
+  color: rgb(70, 70, 70);
+  font-family: monospace;
+  font-size: 3rem;
+}
+
+.keypad {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.row {
+  flex: 1;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.key {
+  flex: 1;
+  background-color: rgb(203, 233, 255);
+  border: none;
+  border-radius: 5%;
+  cursor: pointer;
+  font: 2rem monospace;
+  color: white;
+}
+.key:hover {
+  background-color: rgb(201, 215, 225);
+}
+.key > img {
+  width: 2rem;
+}
+
+.large-key {
+  flex: 1.5;
+}
+.extra-large-key {
+  flex: 2;
+}
+
+.ac-key,
+.undo-key {
+  background-color: rgb(135, 211, 255);
+}
+
+.operator-key {
+  background-color: rgb(150, 199, 242);
+}
+
+.equals-key {
+  background-color: rgb(25, 172, 255);
+}
