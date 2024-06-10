@@ -29,7 +29,7 @@ displayText.textContent = displayValue; //set initial 'displayText'
 
 //Loop: add event listeners to all keys to peform applicable actions on click
 keys.forEach((i) => {
-  if (i.dataset.value === "ac") {
+  if (i.dataset.value === "c") {
     //AC key (reset everything)
     i.addEventListener("click", () => {
       currentOperator = undefined;
@@ -40,8 +40,8 @@ keys.forEach((i) => {
     });
 
     return;
-  } else if (i.dataset.value === "undo") {
-    //Undo key (delete last digit)
+  } else if (i.dataset.value === "backspace") {
+    //Undo/backspace key (delete last digit)
     i.addEventListener("click", () => {
       displayValue = displayValue.slice(0, -1); //use 'slice' method to remove last digit
       displayText.textContent = displayValue;
