@@ -7,6 +7,14 @@ body {
   margin: 0;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-container {
+  flex: 1;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -84,4 +92,24 @@ body {
 
 .equals-key {
   background-color: rgb(25, 172, 255);
+}
+
+footer a {
+  display: flex;
+  gap: 0.25rem;
+  text-decoration: none;
+  color: black;
+  padding-bottom: 0.5rem;
+}
+footer a:hover {
+  transition: 0.25s;
+  color: gray;
+}
+
+footer a img {
+  width: 1.5rem;
+}
+
+footer a span {
+  font-size: 1.5rem;
 }
