@@ -148,3 +148,21 @@ function operatorClicked(op) {
     }
   }
 }
+
+//Section: keyboard support
+
+//Get dataset of all keys
+let availableKeys = [...document.querySelectorAll(".key")];
+availableKeys = availableKeys.map((i) => i.dataset.value);
+
+//When a (keyboard) key is pressed check if equals a calculator key, if so, click calculator key
+document.addEventListener("keydown", (i) => {
+  const keyPressed = i.key.toLowerCase();
+  if (keyPressed === "enter") {
+    //an expection for 'enter' keys since they pretty much correspond to the 'equals' key
+    document.querySelector(`[data-value="="]`).click();
+  }
+  if (availableKeys.includes(keyPressed)) {
+    document.querySelector(`[data-value="${keyPressed}"]`).click();
+  }
+});
