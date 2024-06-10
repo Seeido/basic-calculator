@@ -64,7 +64,7 @@ keys.forEach((i) => {
         if (result === "Can't divide by zero") {
           window.alert("You can't divide by zero!");
         } else {
-          displayValue = result;
+          displayValue = result.toString();
           displayText.textContent = displayValue;
 
           firstNum = undefined;
@@ -137,7 +137,7 @@ function operatorClicked(op) {
     if (result === "Can't divide by zero") {
       window.alert("You can't divide by zero!");
     } else {
-      displayValue = result;
+      displayValue = result.toString();
       displayText.textContent = displayValue;
 
       firstNum = result;
